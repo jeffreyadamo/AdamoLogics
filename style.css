@@ -1,0 +1,64 @@
+
+body {
+    margin: 0px;
+    background-color: #0c0d0d;
+    color: whitesmoke;
+}
+
+.middle {
+    display: flex;
+    justify-content:center;
+}
+
+.spaceGif {
+    height: 600px;
+}
+
+.title {
+    font-family: 'Major Mono Display', monospace;
+}
+
+.subtitle {
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 20px 0px 20px;
+    text-align: center;
+}
+
+.buttonMiddle {
+    margin: 0px 0px 0px 0px;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: #0c0d0d;
+    background-image: url("https://media.giphy.com/media/lPAaLdlvicAMJWn5L4/giphy.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .pemdas {
+    margin-left: -15px !important;
+} */
+.border {
+    border-style: solid;
+    border-color: whitesmoke;
+    /* padding: 10px 10px 10px 10px; */
+}
+
+.black {
+    background-color: #0c0d0d;
+    color: whitesmoke;
+}
+
+.white {
+    color: whitesmoke;
+}
+
+.bottom {
+    margin-top: 500px;
+}
+
