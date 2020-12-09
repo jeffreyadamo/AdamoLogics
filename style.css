@@ -1,8 +1,11 @@
-
 body {
     margin: 0px;
     background-color: #0c0d0d;
     color: whitesmoke;
+}
+
+hr {
+    background-color: whitesmoke;
 }
 
 .middle {
@@ -19,7 +22,6 @@ body {
 }
 
 .subtitle {
-    /* font-family: 'Roboto', sans-serif; */
     margin: 20px 0px 20px;
     text-align: center;
 }
@@ -32,6 +34,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.domine {
+    font-family: 'Domine', serif;
+}
+
 .navbar {
     background-color: #0c0d0d;
     background-image: url("https://media.giphy.com/media/lPAaLdlvicAMJWn5L4/giphy.gif");
@@ -39,14 +45,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/* .pemdas {
-    margin-left: -15px !important;
-} */
 .border {
     border-style: solid;
     border-color: whitesmoke;
-    /* padding: 10px 10px 10px 10px; */
 }
 
 .black {
@@ -59,6 +60,36 @@ body {
 }
 
 .bottom {
-    margin-top: 500px;
+    margin-top: 50px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
+
+#tempF {
+    font-size: 26px;
+}
+
+#tempC {
+    font-size: 26px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+}
+
+.jupiter {
+    margin-top: 20px;
+    display: flex;
+   justify-content: center;
+   width: 100%;
+
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
 
