@@ -1,4 +1,4 @@
-# AdamoLogics
+# [AdamoLogics](https://jeffreyadamo.github.io/AdamoLogics/)
 ### Est. 12/20202  
 
 Welcome to my first project intended for it's own website!  
