@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     $("#tempForm").on("submit", function(event) {
         event.preventDefault();
         let tempF = document.getElementById("tempF").value;
@@ -18,19 +17,16 @@ $(document).ready(function(){
     // Party Mode
     let partyMode = false;
     $("#partySwitch").on("change", function(event) {
-        // event.preventDefault();
         if (!partyMode){
             partyMode = true; 
-            // let partySection = document.createElement("section");
-            // $("#partyMode").append(partySection);
             $("#partyMode").append("<section></section>");
             setInterval(createSquare, 150);
+            $(".navbar").css({"background-image": "url('https://media.giphy.com/media/lPAaLdlvicAMJWn5L4/giphy.gif')"});
         } else {
             partyMode = false;
             clearInterval(createSquare);
             $("#partyMode").empty();
-
-            
+            $(".navbar").css({"background-image": ""});
         }
         console.log("partyMode is " + partyMode);
     })
@@ -59,9 +55,7 @@ $(document).ready(function(){
         setTimeout(() =>{
             square.remove()
         },5000)
-    }
-    
-    
+    }   
     ///////////////////////
 
 })

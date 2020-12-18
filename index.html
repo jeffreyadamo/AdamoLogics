@@ -46,23 +46,23 @@
         <hr>
         <br>
         <!-- Temperature Calculator -->
-        <div class="row  flex-center">
+        <div class="row flex-center tempCalc">
             <div class="col-5 border" >
                 <div class="row">
                     <div class="col-12 middle subtitle">
-                        <h4>Input</h4>
+                        <h4 class="calcFont">Input</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <form class="form-row" id="tempForm">
-                            <div class="form-group col-md-5">
+                            <div class="form-group col-lg-5 col-md-5 col-sm-9 col-8">
                               <input type="text" class="form-control" id="tempF">
                             </div>
-                            <div class="form-group col-md-3">
-                                <h3>&#176 F</h3>
+                            <div class="form-group col-lg-3 col-md-3 col-sm-3 col-4">
+                                <h3 >&#176F</h3>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-lg-4 col-md-4 col-sm-9 col-12">
                                 <button type="submit" class="btn btn-warning">Convert</button>
                             </div>
                         </form>
@@ -71,27 +71,27 @@
             </div>
             <div class="col-2">
                 <div class="row">
-                    <div class="col-12 middle">
-                        <h3>PEMDAS</h3>
+                    <div class="col-12 middle" >
+                        <h3 class="calcFont">PEMDAS</h3>
                     </div>
                 </div>
             </div>
             <div class="col-5 border">
                 <div class="row">
                     <div class="col-12 middle subtitle">
-                        <h4>Output</h4>
+                        <h4 class="calcFont">Output</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <form class="form-row" id="tempCForm">
-                            <div class="form-group col-md-5">
+                            <div class="form-group col-lg-5 col-md-5 col-sm-9 col-8">
                               <input type="text" class="form-control" id="tempC">
                             </div>
-                            <div class="form-group col-md-3">
-                                <h3>&#176 C</h3>
+                            <div class="form-group col-lg-3 col-md-3 col-sm-3 col-4">
+                                <h3>&#176C</h3>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-lg-4 col-md-4 col-sm-9 col-12">
                                 <button type="submit" class="btn btn-warning">Convert</button>
                             </div>
                         </form>
@@ -112,16 +112,20 @@
         </div>
         <br>
         <hr>
-
     </div>
-    <!-- Footer -->
-    <div class="bottom roboto">
+    <div class="footer roboto">
         Copyright (c) 2020 Jeffrey Adamo
+        <a 
+          style="margin-left: 5px;"
+          href="https://github.com/jeffreyadamo"
+          target="_blank"
+        >          
+            <img
+              src="https://github.githubassets.com/favicons/favicon.svg" title="GitHub Profile" alt="GitHub profile image link"
+            />
+          </a>
     </div>
-    <!-- Animated Background -->
     <div id="partyMode">
-        <!-- <section>
-        </section> -->
     </div>
 
     <script

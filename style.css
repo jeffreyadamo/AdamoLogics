@@ -6,7 +6,7 @@
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     /* height: 100vh; */
     background-color: #0c0d0d;
     color: whitesmoke;
@@ -48,7 +48,6 @@ hr {
 
 .navbar {
     background-color: #0c0d0d;
-    background-image: url("https://media.giphy.com/media/lPAaLdlvicAMJWn5L4/giphy.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,11 +66,11 @@ hr {
     color: whitesmoke;
 }
 
-.bottom {
-    margin-top: 50px;
-    margin-right: 10px;
+.footer {
+    margin: 20px 10px 10px 0px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 #tempF {
@@ -92,17 +91,11 @@ hr {
     display: flex;
    justify-content: center;
    width: 100%;
-
 }
 
 .flex-center {
     display: flex;
     align-items: center;
-}
-
-/* Animated Background */
-section {
-    height: 100vh;
 }
 
 span {
@@ -128,5 +121,10 @@ span {
     transform: scale(1) translateY(-500%) rotate(720deg);
    } 
 }
-/* Animated Background */
+
+@media screen and (max-width: 767px) {
+    .calcFont {
+        font-size: 16px;
+    }
+}
 
