@@ -1,0 +1,35 @@
+{
+  "name": "adamologics",
+  "version": "1.0.0",
+  "description": "practice space for a self-programmed full-stack web application that is server hosted",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffreyadamo/AdamoLogics.git"
+  },
+  "keywords": [
+    "adamologics",
+    "js",
+    "html",
+    "css",
+    "express",
+    "node.js",
+    "heroku",
+    "www.adamologics.com"
+  ],
+  "author": "Jeffrey Adamo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeffreyadamo/AdamoLogics/issues"
+  },
+  "homepage": "https://github.com/jeffreyadamo/AdamoLogics#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
