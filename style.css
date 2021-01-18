@@ -126,5 +126,12 @@ span {
     .calcFont {
         font-size: 16px;
     }
+    #tempC {
+        font-size: 16px;
+    }
+    #tempF {
+        font-size: 16px;
+    }
 }
+
 
