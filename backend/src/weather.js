@@ -1,17 +1,22 @@
-// Appear on load
-const weatherForcast = () => {
-  console.log('weather is online');
-}
-weatherForcast()
-
 // Default city
-const defaultCity = 'Seattle, WA'
+const citySearch = 'seattle';
 
 const city = document.getElementById("city");
-city.innerHTML = defaultCity;
+city.innerHTML = "Seattle, WA";
 
-const weather = document.createElement('div');
-weather.innerHTML = "47 &#176F";
+const weather = document.getElementById('weather');
+const icon = document.createElement('img');
 
-city.appendChild(weather);
+function weatherAPI(citySearch){
+  $.get('/api/weather/' + citySearch)
+  .then((response) => {
+    weather.innerHTML = response.temp + "&#176F";
+    icon.setAttribute('src', response.iconURL);
+    weather.appendChild(icon);
+  })
+  .catch((err) => { 
+    if (err) throw err}
+  )
+}
 
+weatherAPI(citySearch);
