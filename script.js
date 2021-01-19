@@ -1,4 +1,8 @@
+// const weather = require('./backend/src/weather.js');
+
+
 $(document).ready(function(){
+
 
     $("#tempForm").on("submit", function(event) {
         event.preventDefault();
@@ -29,6 +33,7 @@ $(document).ready(function(){
             $(".navbar").css({"background-image": ""});
         }
         console.log("partyMode is " + partyMode);
+        console.log('change');
     })
 
     // Animation Squares
