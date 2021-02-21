@@ -16,6 +16,7 @@ module.exports = function(app) {
 
     axios.get(queryURL)
     .then((response) => {
+      
       console.log("status = " + response.status);
       let temp = response.data.main.temp.toFixed(1);
       let iconURL = "https://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png";

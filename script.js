@@ -1,8 +1,4 @@
-// const weather = require('./backend/src/weather.js');
-
-
 $(document).ready(function(){
-
 
     $("#tempForm").on("submit", function(event) {
         event.preventDefault();
@@ -23,7 +19,9 @@ $(document).ready(function(){
     $("#partySwitch").on("change", function(event) {
         if (!partyMode){
             partyMode = true; 
-            $("#partyMode").append("<section></section>");
+            const newSection = document.createElement('section');
+            newSection.style.width = '200px';
+            $("#partyMode").append(newSection);
             setInterval(createSquare, 150);
             $(".navbar").css({"background-image": "url('https://media.giphy.com/media/lPAaLdlvicAMJWn5L4/giphy.gif')"});
         } else {
@@ -48,10 +46,10 @@ $(document).ready(function(){
         const section = document.querySelector("section");
         const square = document.createElement("span");
         var size = Math.random() * 50;
-        square.style.width = 20 + size + 'px';
-        square.style.height = 20 + size + 'px';
-        square.style.top = Math.random() * innerHeight + 'px';
-        square.style.left = Math.random() * innerWidth + 'px';
+        square.style.width = size + 'px';
+        square.style.height = size + 'px';
+        square.style.top = 0.96*(Math.random() * innerHeight) + 'px';
+        square.style.left = 0.96*(Math.random() * innerWidth) + 'px';
         const bg = colors[Math.floor(Math.random() * colors.length)];
         square.style.background = bg;
         if(partyMode){

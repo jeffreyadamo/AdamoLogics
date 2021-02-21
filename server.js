@@ -24,13 +24,14 @@ app.use(express.json());
 require("./routes/api-routes.js")(app);
 
 // HTML Routes
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
-  });
+require("./routes/html-routes.js")(app);
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, "index.html"));
+//   });
 
-app.get("*", (req, res) => {
-res.sendFile(path.join(__dirname, "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
 
 // Starts the server to begin listening
 // =============================================================
