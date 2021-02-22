@@ -67,6 +67,20 @@ hr {
     justify-content: center;
 }
 
+#nasa {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#nasaPOTDExplanation {
+    width: 70%;
+    font-size: small;
+}
+
+#nasaPOTDAuthor {
+    font-size: small;
+}
 .navbar {
     background-color: #0c0d0d;
     background-position: center;
