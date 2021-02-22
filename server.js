@@ -15,6 +15,8 @@ const PORT = process.env.PORT || 3000;
 // Use the Express app to handle data parsing
 app.use(express.static(__dirname + "/"));
 app.use(express.urlencoded({ extended: true }));
+// app.use(express.static("public"));
+
 app.use(morgan('tiny'));
 app.use(compression());
 app.use(helmet());
@@ -24,13 +26,14 @@ app.use(express.json());
 require("./routes/api-routes.js")(app);
 
 // HTML Routes
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
-  });
+require("./routes/html-routes.js")(app);
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, "index.html"));
+//   });
 
-app.get("*", (req, res) => {
-res.sendFile(path.join(__dirname, "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
 
 // Starts the server to begin listening
 // =============================================================
