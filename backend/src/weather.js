@@ -19,6 +19,5 @@ function weatherAPI(citySearch){
     if (err) throw err}
   )
 }
-
 // Comment out to save API use
-// weatherAPI(citySearch);
+weatherAPI(citySearch);

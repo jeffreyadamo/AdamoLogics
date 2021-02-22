@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     $("#tempForm").on("submit", function(event) {
         event.preventDefault();
         let tempF = document.getElementById("tempF").value;
