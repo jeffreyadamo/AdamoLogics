@@ -76,6 +76,7 @@ hr {
 #nasaPOTDExplanation {
     width: 70%;
     font-size: small;
+    text-align:justify;
 }
 
 #nasaPOTDAuthor {

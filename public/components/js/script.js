@@ -15,30 +15,7 @@ $("#tempCForm").on("submit", function(event) {
     let tempF = ((tempC * (9/5)) + 32);
     document.getElementById("tempF").value = tempF.toFixed(2);
 })
-// ========================================================================
 
-// NASA PIC OF THE DAY
-// ========================================================================
-function getPOTD() {
-    $.get('https://api.nasa.gov/planetary/apod?api_key=I5hJfu7D8nKT2KpOGLAyVaIe11JkH1uWszjag25o')
-    .then((response) => {
-        console.log(response);
-        let nasa = document.getElementById('nasa');
-        var link = document.createElement('a');
-        var img = document.createElement("img");
-        link.setAttribute('href', response.hdurl);
-        link.setAttribute('target', '_blank');
-        img.setAttribute('src', response.url);
-        img.style.height= '40rem';
-        link.appendChild(img);
-        nasa.appendChild(link);
-        document.getElementById('nasaPOTDAuthor').append(response.copyright);
-        document.getElementById('nasaPOTDTitle').append(response.title);
-        document.getElementById('nasaPOTDExplanation').append(response.explanation);
-    });
-}
-getPOTD();
-// ========================================================================
     
 // PARTY MODE
 // ========================================================================
