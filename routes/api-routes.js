@@ -37,11 +37,9 @@ module.exports = function(app) {
   //  =========================================================================
   app.get("/api/getNasaPOTD", (req, res) => {
     let NASAqueryURL = "https://api.nasa.gov/planetary/apod?api_key=" + NasaAPIkey;
-    console.log(NASAqueryURL);
     axios.get(NASAqueryURL)
     .then((response) => {      
       console.log("NASA response status = " + response.status);
-
       let resObj = {
         date: response.data.date,
         explanation: response.data.explanation,

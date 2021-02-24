@@ -17,14 +17,17 @@ function getNasaPOTD() {
         link.setAttribute('href', response.hdurl);
         let img = document.createElement("img");
         img.setAttribute('src', response.url);
-        img.style.height= '40rem';
+        img.style.width= '100%';
         link.appendChild(img);
     }
 
     nasa.appendChild(link);
-    document.getElementById('nasaPOTDAuthor').append(response.copyright);
+    
     document.getElementById('nasaPOTDTitle').append(response.title);
     document.getElementById('nasaPOTDExplanation').append(response.explanation);
+    if (response.copyright) {
+      document.getElementById('nasaPOTDAuthor').append("Photograph copyright: " + response.copyright);
+    };
   })
 }
 getNasaPOTD();
