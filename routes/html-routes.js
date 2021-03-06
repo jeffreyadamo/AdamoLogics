@@ -12,13 +12,12 @@ var path = require("path");
 module.exports = function(app) {
 
   app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../index.html"));
+    res.sendFile(path.join(__dirname, "../public/components/views/index.html"));
   });
 
-  app.get("/spotify", (req, res) => {
-    res.sendFile(path.join(__dirname, "../spotify.html"));
+  app.get("/redirect", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/components/views/redirect.html"));
   });
-
   app.get("/*", (req, res) => {
     res.redirect('..');
   });
