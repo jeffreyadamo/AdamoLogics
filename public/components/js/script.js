@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+// $(".spotifyDiv").on("click", function(event) {
+//     event.preventDefault();
+//     alert("Soon this will direct towards Spotify's authentication page");
+
+// });
+
 // TEMP CALCULATOR
 // ========================================================================
 $("#tempForm").on("submit", function(event) {
