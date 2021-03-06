@@ -15,6 +15,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/components/views/index.html"));
   });
 
+  app.get("/spotify", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/components/views/spotify.html"));
+  });
+
   app.get("/redirect", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/components/views/redirect.html"));
   });
