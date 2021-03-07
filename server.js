@@ -1,10 +1,11 @@
 // Dependencies
 // =============================================================
+const express = require("express");
+// const path = require("path");
 require("dotenv").config();
 
 // Set up the Express App
 // =============================================================
-const express = require("express");
 const app = express();
 const morgan = require('morgan');
 const compression = require('compression');
@@ -19,7 +20,11 @@ app.use(express.static("public"));
 // Middleware
 app.use(morgan('tiny'));
 app.use(compression());
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 
 // API Routes
 require("./routes/api-routes.js")(app);
