@@ -4,6 +4,12 @@ const express = require("express");
 // const path = require("path");
 require("dotenv").config();
 
+// Spotify stuff
+const request = require('request');
+const cors = require('cors');
+const quickstring = require('quickstring');
+const cookieParser = require('cookie-parser');
+
 // Set up the Express App
 // =============================================================
 const app = express();
@@ -15,7 +21,9 @@ const PORT = process.env.PORT || 3000;
 // Use the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("public"))
+  .use(cors())
+  .use(cookieParser());
 
 // Middleware
 app.use(morgan('tiny'));
