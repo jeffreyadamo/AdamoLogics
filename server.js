@@ -13,12 +13,11 @@ const helmet = require('helmet');
 const PORT = process.env.PORT || 3000;
 
 // Use the Express app to handle data parsing
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-// app.use(express.static(__dirname + "/"));
 
+// Middleware
 app.use(morgan('tiny'));
 app.use(compression());
 app.use(
@@ -26,21 +25,6 @@ app.use(
     contentSecurityPolicy: false,
   })
 );
-// app.use(
-//   helmet({
-//       contentSecurityPolicy: {
-//           directives: {
-//               defaultSrc: ["'self'"],
-//               scriptSrc: ["'self'", "https://code.jquery.com", "https://cdn.jsdelivr.net"],
-//               connectSrc: ["'self'", "http://www.adamologics.com"],
-//               styleSrc: ["'self'", "fonts.googleapis.com", "https://cdn.jsdelivr.net", "'unsafe-inline'"],
-//               fontSrc: ["'self'", "fonts.gstatic.com"],
-//               imgSrc: ["'self'", "https://i.imgur.com/", "https://github.githubassets.com", "https://apod.nasa.gov/", "https://openweathermap.org"],
-//               frameSrc: ["'self'"]
-//           }
-//       },
-//   })
-// );
 
 // API Routes
 require("./routes/api-routes.js")(app);
