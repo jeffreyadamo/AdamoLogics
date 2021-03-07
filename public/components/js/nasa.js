@@ -17,7 +17,7 @@ function getNasaPOTD() {
         link.setAttribute('href', response.hdurl);
         let img = document.createElement("img");
         img.setAttribute('src', response.url);
-        img.style.width= '100%';
+        img.style.width= '70vw';
         link.appendChild(img);
     }
 
