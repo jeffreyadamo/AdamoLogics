@@ -7,11 +7,10 @@ function getUserInfo() {
   $.get('/api/getUserInfo')
   .then((data) =>{
     var dataObj = JSON.parse(data)
-    console.log(dataObj)
+    // console.log(dataObj)
     let spotifyUsername = dataObj.display_name;
     let spotifyUserPhoto = dataObj.images[0].url;
     let spotifyUserHomepage = dataObj.external_urls.spotify;
-    console.log(spotifyUserPhoto);
     insertSpotifyUserName(spotifyUsername);
     insertSpotifyUserPhoto(spotifyUserPhoto);
     insertSpotifyUserHomepageLink(spotifyUserHomepage);
