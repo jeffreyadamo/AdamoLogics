@@ -39,9 +39,9 @@ module.exports = function (app) {
   // SPOTIFY
   // =============================================================
   // source code refactored from https://github.com/spotify/web-api-auth-examples/blob/master/authorization_code/app.js
-  const client_id = process.env.SPOTIFY_CLIENT_ID_DEV;
-  const client_secret = process.env.SPOTIFY_CLIENT_SECRET_DEV;
-  const redirect_uri = process.env.SPOTIFY_REDIRECT_URI_DEV;
+  const client_id = process.env.SPOTIFY_CLIENT_ID;
+  const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+  const redirect_uri = process.env.SPOTIFY_REDIRECT_URI;
   var stateKey = "spotify_auth_state";
   /**
    * Generates a random string containing numbers and letters
