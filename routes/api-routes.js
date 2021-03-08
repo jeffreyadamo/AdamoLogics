@@ -57,4 +57,22 @@ module.exports = function(app) {
     });  
   })
 
+  // =========================================================
+  // SPOTIFY
+  // ==========================================================
+  var path = require("path");
+  var fs = require("fs");
+  app.get("/api/getUserInfo", (req, res) => {
+    var userInfo;
+    fs.readFile(
+      path.join(__dirname, "../backend/API/userinfo.JSON"),
+      function (err, data) {
+        if (err) throw err;
+         userInfo = data.toString();
+        res.send(userInfo);
+      }
+    );
+    
+  })
+
 }
