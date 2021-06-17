@@ -16,6 +16,7 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
     rel="stylesheet"
     />
+    <link href="https://pagecdn.io/lib/easyfonts/courgette.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="/components/css/style.css" />
   </head>
@@ -47,11 +48,21 @@
         <hr>
         <div class="row">
             <div class="col-12 domine middle">
-                <h4 class="text-center">My full stack play space on the internet</h4>
+                <h3 class="text-center yellow">My full stack play space on the internet</h3>
             </div>           
         </div>
         <hr>
         <div class="row">
+          <div class="col-12">
+              <h5 style="font-style:italic; font-weight:bold;">
+                Project Hightlight!
+             </h5>
+          </div> 
+          <br>  
+          <br>        
+        </div>
+        <!-- SPOTIFY PROJECT INSERT -->
+        <!-- <div class="row">
           <div class="col-12 spotifyDiv">
             <div class="row">
               <div class="col-12 middle">
@@ -74,70 +85,130 @@
             </div>           
         </div>
           </div>
+        </div> -->
+        <!-- SPOTIFY PROJECT END -->
+
+    <!-- PANDEMIC PANTRY INSERT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 middle pantry">
+          <a
+          href="https://pandemic-pantry.herokuapp.com/"
+          target="_blank">
+            <div>
+              <h2>
+                Pandemic Pantry
+              </h2>
+            </div>
+          </a>
         </div>
-        
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12 roboto">
+          <a 
+          style="font-family: 'Courgette', cursive; font-size:20px;"
+          href="https://pandemic-pantry.herokuapp.com/"
+          target="_blank">
+            Pandemic Pantry
+          </a> 
+          will search recipies using the <a href="https://spoonacular.com/food-api" target="_blank" class="yellow">Spoonacular API</a> and <a style="font-style:italic">only</a> display the ingredients, instructions, picture, and link to the source page. No ads or 5 pages of extra fluff! Searches can be adjusted to your diet type or specific food intolerances. It was my first group project during bootcamp and even though it's simple, I use it all the time!
+        </div>
+        <div class="col-12 roboto small right">
+          Open source project hosted on 
+          <a 
+            href="https://github.com/jeffreyadamo/PandemicPantry" 
+            target="_blank"
+            style="text-decoration:underline"
+            class="yellow">
+          GitHub</a>
+        and 
+          <a 
+            href="https://pandemic-pantry.herokuapp.com/" 
+            target="_blank"
+            style="text-decoration:underline"
+            class="yellow">
+          Heroku
+          </a>
+        </div>
+      </div>        
+    </div>
+  
+    <!-- PANDEMIC PANTRY END -->
+
       <hr>
-        <br>
         <!-- Temperature Calculator -->
-        <div class="row flex-center tempCalc">
-            <div class="col-5 border" >
-                <div class="row">
-                    <div class="col-12 subtitle">
-                        <h4 class="text-center">Input</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <form class="form-row" id="tempForm">
-                            <div class="form-group col-lg-5 col-md-5 col-sm-9 col-8">
-                              <input type="text" class="form-control" id="tempF">
-                            </div>
-                            <div class="form-group col-lg-3 col-md-3 col-sm-3 col-4">
-                                <h3>&#176F</h3>
-                            </div>
-                            <div class="form-group col-lg-4 col-md-4 col-sm-9 col-12">
-                                <button type="submit" class="btn btn-warning">Convert</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="row">
-                    <div class="col-12 middle" >
-                        <h3 class="calcFont">PEMDAS</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-5 border">
-                <div class="row">
-                    <div class="col-12 subtitle">
-                        <h4 class="text-center">Output</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <form class="form-row" id="tempCForm">
-                            <div class="form-group col-lg-5 col-md-5 col-sm-9 col-8">
-                              <input type="text" class="form-control" id="tempC">
-                            </div>
-                            <div class="form-group col-lg-3 col-md-3 col-sm-3 col-4">
-                                <h3>&#176C</h3>
-                            </div>
-                            <div class="form-group col-lg-4 col-md-4 col-sm-9 col-12">
-                                <button type="submit" class="btn btn-warning">Convert</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+              <h5 style="font-style:italic; font-weight:bold;">
+                Calculate some stuff
+             </h5>
+          </div> 
+          <br>  
+          <br>        
         </div>
+        <div class="row flex-center tempCalc">
+          <div class="col-5 border" >
+              <div class="row">
+                  <div class="col-12 subtitle">
+                      <h4 class="text-center">Input</h4>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-12">
+                      <form class="form-row" id="tempForm">
+                          <div class="form-group col-lg-5 col-md-5 col-sm-9 col-8">
+                            <input type="text" class="form-control" id="tempF">
+                          </div>
+                          <div class="form-group col-lg-3 col-md-3 col-sm-3 col-4">
+                              <h3>&#176F</h3>
+                          </div>
+                          <div class="form-group col-lg-4 col-md-4 col-sm-9 col-12">
+                              <button type="submit" class="btn btn-warning">Convert</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="col-2">
+              <div class="row">
+                  <div class="col-12 middle" >
+                      <h3 class="calcFont">PEMDAS</h3>
+                  </div>
+              </div>
+          </div>
+          <div class="col-5 border">
+              <div class="row">
+                  <div class="col-12 subtitle">
+                      <h4 class="text-center">Output</h4>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-12">
+                      <form class="form-row" id="tempCForm">
+                          <div class="form-group col-lg-5 col-md-5 col-sm-9 col-8">
+                            <input type="text" class="form-control" id="tempC">
+                          </div>
+                          <div class="form-group col-lg-3 col-md-3 col-sm-3 col-4">
+                              <h3>&#176C</h3>
+                          </div>
+                          <div class="form-group col-lg-4 col-md-4 col-sm-9 col-12">
+                              <button type="submit" class="btn btn-warning">Convert</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+            </div>
+        </div>
+     </div>
+        
         <!-- End Temperature Calculator -->
         <!-- NASA POTD -->
         <br>
         <hr>
         <div class="row domine">
-          <div class="col-12 middle">
+          <div class="col-12 middle yellow">
             <h3>NASA's Picture of the Day</h3>   
           </div>
         </div>
@@ -146,7 +217,7 @@
           <div class="col-12 middle">
             <h5 id="nasaPOTDTitle"></h5>   
           </div>
-       </div>
+        </div>
        <div class="row domine">
           <div id="nasa" class="col-12"></div>
        </div>
@@ -157,6 +228,7 @@
         </div>
        </div>
        <br>
+
       <div class="row">
         <div id="nasaPOTDAuthor" class="col-12 middle"></div>       
       </div> 
@@ -169,20 +241,23 @@
           </a>               
         </div>
       </div>
+
     </div>
-    </div>
+
     <div id="partyMode"></div>
-    <div class="footer roboto">
-        Copyright (c) 2020-2021 Jeffrey Adamo
-        <a 
-          style="margin-left: 5px;"
-          href="https://github.com/jeffreyadamo"
-          target="_blank"
-        >          
-            <img
-              src="https://github.githubassets.com/favicons/favicon.svg" title="GitHub Profile" alt="GitHub profile image link"
-            />
-          </a>
+    <div class="footer roboto yellow">
+      <a 
+        style="margin-left: 5px;"
+        href="https://github.com/jeffreyadamo"
+        target="_blank"
+      >  Copyright (c) 2020-2021 Jeffrey Adamo      
+      </a>
+      <a
+        style="margin-left: 5px;"
+        href="https://github.com/jeffreyadamo/adamologics"
+        target="_blank">  
+        <img src="https://github.githubassets.com/favicons/favicon.svg" title="GitHub Profile" alt="GitHub profile image link"/>
+      </a>                
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
