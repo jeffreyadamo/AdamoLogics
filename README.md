@@ -15,3 +15,5 @@ The goal of this project is to host my own DIY website. Coded from scratch. Buil
 
 More details to come...
 
+6/16/2021: I'm going to keep the spotify work in the spotify/branch, but remove the access to it on the main branch. I don't want people using it while I'm still working on the authentication token usage. I also want to change other stuff to the main branch. 
+
