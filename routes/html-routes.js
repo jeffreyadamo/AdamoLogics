@@ -39,9 +39,9 @@ module.exports = function (app) {
   // SPOTIFY
   // =============================================================
   // source code refactored from https://github.com/spotify/web-api-auth-examples/blob/master/authorization_code/app.js
-  const client_id = process.env.SPOTIFY_CLIENT_ID;
-  const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
-  const redirect_uri = process.env.SPOTIFY_REDIRECT_URI;
+  const client_id = process.env.SPOTIFY_CLIENT_ID_DEV;
+  const client_secret = process.env.SPOTIFY_CLIENT_SECRET_DEV;
+  const redirect_uri = process.env.SPOTIFY_REDIRECT_URI_DEV;
   var stateKey = "spotify_auth_state";
   /**
    * Generates a random string containing numbers and letters
@@ -124,6 +124,16 @@ module.exports = function (app) {
             headers: { Authorization: "Bearer " + access_token },
             json: true,
           };
+          
+          var tokensObj = JSON.stringify({access_token, refresh_token});
+          
+          fs.writeFile(
+            path.join(__dirname, "../backend/API/tokens.JSON"),
+            tokensObj,
+            function (err) {
+              if (err) throw err;
+              console.log("tokens.JSON created");
+            });
 
           // use the access token to access the Spotify Web API
           request.get(options, function (error, response, body) {
@@ -138,6 +148,24 @@ module.exports = function (app) {
               }
             );
           });
+
+          // Let's try to get user's top artists and tracks
+          var userOptions = {
+            url: "https://api.spotify.com/v1/me/top/artists?&limit=50",
+            headers: { Authorization: "Bearer " + access_token},
+            json: true,
+          }
+          request.get(userOptions, function(error, response, body) {
+            var returnedTopObj = JSON.stringify(body);
+            fs.writeFile(
+              path.join(__dirname, "../backend/API/usersTopArtistsAndTracks.JSON"),
+              returnedTopObj,
+              function (err) {
+                if (err) throw err;
+                console.log("usersTopArtistsAndTracks.JSON created")
+              }
+            )
+          })
 
           // we can also pass the token to the browser to make requests from there
           res.redirect(
