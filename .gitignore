@@ -1,2 +1,5 @@
 .env
 node_modules
+/backend/API/tokens.JSON
+/backend/API/userinfo.JSON
+/backend/API/usersTopArtistsAndTracks.JSON

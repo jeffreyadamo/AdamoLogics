@@ -124,6 +124,16 @@ module.exports = function (app) {
             headers: { Authorization: "Bearer " + access_token },
             json: true,
           };
+          
+          var tokensObj = JSON.stringify({access_token, refresh_token});
+          
+          fs.writeFile(
+            path.join(__dirname, "../backend/API/tokens.JSON"),
+            tokensObj,
+            function (err) {
+              if (err) throw err;
+              console.log("tokens.JSON created");
+            });
 
           // use the access token to access the Spotify Web API
           request.get(options, function (error, response, body) {
@@ -138,6 +148,24 @@ module.exports = function (app) {
               }
             );
           });
+
+          // Let's try to get user's top artists and tracks
+          var userOptions = {
+            url: "https://api.spotify.com/v1/me/top/artists?&limit=50",
+            headers: { Authorization: "Bearer " + access_token},
+            json: true,
+          }
+          request.get(userOptions, function(error, response, body) {
+            var returnedTopObj = JSON.stringify(body);
+            fs.writeFile(
+              path.join(__dirname, "../backend/API/usersTopArtistsAndTracks.JSON"),
+              returnedTopObj,
+              function (err) {
+                if (err) throw err;
+                console.log("usersTopArtistsAndTracks.JSON created")
+              }
+            )
+          })
 
           // we can also pass the token to the browser to make requests from there
           res.redirect(
