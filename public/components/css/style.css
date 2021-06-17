@@ -15,7 +15,8 @@ body {
 }
 
 hr {
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background-color: #FFC107;
 }
 
 #weather{
@@ -80,9 +81,10 @@ hr {
 }
 
 #nasaPOTDExplanation {
-    width: 70%;
-    font-size: small;
+    width: 90%;
+    font-size: medium;
     text-align:justify;
+    font-family:Roboto
 }
 
 #nasaPOTDAuthor {
@@ -94,6 +96,25 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.pantry {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/bannerImage2.jpg");
+    padding: 75px 0px 75px 0px;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;  
+    font-family: 'Courgette', cursive;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.right {
+    text-align: right;
+ }
 
 .spaceGif {
     height: 600px;
@@ -116,13 +137,6 @@ hr {
     font-family: 'Major Mono Display', monospace;
 }
 
-.roboto {
-    font-family: 'Roboto', sans-serif;
-}
-
-.right {
-    text-align: right;
- }
 
 .weatherSet {
     display: flex;
@@ -142,6 +156,10 @@ span {
     background: #fff;
     animation: animate 5s linear infinite;
     z-index: -1;
+}
+
+.yellow {
+    color: #FFC107;
 }
 
 @keyframes animate {
