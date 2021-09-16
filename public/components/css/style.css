@@ -80,6 +80,13 @@ hr {
     justify-content: center;
 }
 
+.nasaImageWidth {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 70vw;
+}
+
 #nasaPOTDExplanation {
     width: 90%;
     font-size: medium;
@@ -126,10 +133,14 @@ hr {
 }
 
 #tempC {
+    display: flex;
+    justify-content: center;
     font-size: 26px;
 }
 
 #tempF {
+    display: flex;
+    justify-content: center;
     font-size: 26px;
 }
 
@@ -178,6 +189,23 @@ span {
    } 
 }
 /* End Party Mode animation */
+#nMFont {
+    font-size: 26px;
+}
+#ugmLFont {
+    font-size: 26px;
+}
+
+.inputLabelFont {
+    display: flex;
+    justify-content: center;
+    font-size: 16px
+}
+
+.inputTempFont {
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width: 767px) {
     .calcFont {
@@ -189,8 +217,17 @@ span {
     #tempF {
         font-size: 16px;
     }
+    #nMFont {
+        font-size: 16px;
+    }
+    #ugmLFont {
+        font-size: 16px;
+    }
     #nasaPOTDExplanation {
         width: 100%;
+    }
+    .inputLabelFont {
+        font-size: 12px
     }
 }
 
@@ -203,15 +240,23 @@ span {
     }
     .adamo {
        text-align: center;
-     }
+    }
   }
+
+  @media (min-width: 769px) { 
+    .nasaImageWidth {
+        width: 40vw;
+    }
+  }
+
  
 @media (min-width: 992px) { 
      .left {
-        text-align: center;
+       text-align: center;
      }
      .adamo {
        text-align: left;
      }
  
  }
+

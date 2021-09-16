@@ -17,7 +17,7 @@ function getNasaPOTD() {
         link.setAttribute('href', response.hdurl);
         let img = document.createElement("img");
         img.setAttribute('src', response.url);
-        img.style.width= '70vw';
+        img.setAttribute('class', "nasaImageWidth");
         link.appendChild(img);
     }
 
@@ -30,4 +30,8 @@ function getNasaPOTD() {
     };
   })
 }
-getNasaPOTD();
+
+// var env = process.env.NODE_ENV || 'test';
+// var env = process.env.NODE_ENV || 'development';
+// if (env === 'development'){getNasaPOTD()};
+// getNasaPOTD();
