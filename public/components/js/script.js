@@ -22,6 +22,24 @@ $("#tempCForm").on("submit", function(event) {
     document.getElementById("tempF").value = tempF.toFixed(2);
 })
 
+$("#ugmL_to_molarity_Form").on("submit", function(event) {
+    event.preventDefault();
+    let molecularWeight = document.getElementById("molecularWeightInputugmL").value;
+    let ugmL = document.getElementById("ugmLInput").value;
+    let nanoMolar = (ugmL/molecularWeight)*1000;
+    document.getElementById("molecularWeightInputnM").value = molecularWeight
+    document.getElementById("nMInput").value = nanoMolar.toFixed(2);
+})
+
+$("#molarity_to_ugmL_Form").on("submit", function(event) {
+    event.preventDefault();
+    let molecularWeight = document.getElementById("molecularWeightInputnM").value;
+    let nanoMolar = document.getElementById("nMInput").value;
+    let ugmL = (nanoMolar*molecularWeight)/1000;
+    document.getElementById("molecularWeightInputugmL").value = molecularWeight
+    document.getElementById("ugmLInput").value = ugmL.toFixed(2);
+})
+
     
 // PARTY MODE
 // ========================================================================

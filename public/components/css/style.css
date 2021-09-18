@@ -189,17 +189,15 @@ span {
    } 
 }
 /* End Party Mode animation */
-#nMFont {
-    font-size: 26px;
-}
-#ugmLFont {
-    font-size: 26px;
+.inputBox {
+    font-size: 20px;
 }
 
 .inputLabelFont {
     display: flex;
     justify-content: center;
-    font-size: 16px
+    font-size: 16px;
+    text-align: center;
 }
 
 .inputTempFont {
@@ -217,10 +215,7 @@ span {
     #tempF {
         font-size: 16px;
     }
-    #nMFont {
-        font-size: 16px;
-    }
-    #ugmLFont {
+    .inputBox {
         font-size: 16px;
     }
     #nasaPOTDExplanation {
