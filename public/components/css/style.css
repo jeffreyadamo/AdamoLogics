@@ -23,6 +23,19 @@ hr {
     padding-left: 15px;
 }
 
+#happyNewYear{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    outline: 1px solid #f0f;
+}
+
+.go {
+    color: green;
+  }
+  .stop {
+    color: red;
+  }
+
 .black {
     background-color: #0c0d0d;
     color: whitesmoke;

@@ -2,8 +2,20 @@ require("dotenv").config();
 const axios = require('axios');
 const weatherAPIkey = process.env.OPEN_WEATHER_API_KEY;
 const NasaAPIkey = process.env.NASA_API_KEY;
+var env = process.env.NODE_ENV; 
 
 module.exports = function(app) {
+  // API hello
+  app.get("/api", (req, res) => {
+    res.send("Hello API 👍");
+  });
+
+  // Spoonacular
+  app.get("/api/spoonacular/:recipeSearch", (req, res) => {
+    console.log("Recipe Searched: " + req.params.recipeSearch)
+    res.send("hello spoonacular");
+  })
+
   // Open Weather Map
   //  =========================================================================
   app.get("/api/weather/:citySearch", (req, res) => {
@@ -16,22 +28,30 @@ module.exports = function(app) {
       +units
       +weatherAPI;
 
-    axios.get(queryURL)
-    .then((response) => {      
-      console.log("OpenWeatherMap response status = " + response.status);
-      let temp = response.data.main.temp.toFixed(1);
-      let iconURL = "https://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png";
-
-      let resObj = {
-        temp: temp,
-        iconURL: iconURL,
-      }
-      res.send(resObj)
-    })
-    .catch((err) => {
-      console.log(err);
-    });  
-  })
+    console.log(env);
+    if (env === "development"){
+      res.send({
+        temp: "test",
+        iconURL: "n/a"
+      });
+    } else {
+      axios.get(queryURL)
+      .then((response) => {      
+        console.log("OpenWeatherMap response status = " + response.status);
+        let temp = response.data.main.temp.toFixed(1);
+        let iconURL = "https://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png";
+  
+        let resObj = {
+          temp: temp,
+          iconURL: iconURL,
+        }
+        res.send(resObj)
+      })
+      .catch((err) => {
+        console.log(err);
+      });  
+    }
+  });
   //  =========================================================================
   // NASA Pic Of The Day
   //  =========================================================================

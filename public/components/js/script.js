@@ -1,10 +1,27 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 
 // $(".spotifyDiv").on("click", function(event) {
 //     event.preventDefault();
 //     alert("Soon this will direct towards Spotify's authentication page");
 
 // });
+
+// Happy New Year
+// =======================
+function changeColor() {
+    setInterval(flashText, 500);
+}
+
+function flashText() {
+    const oElem = document.getElementById("happyNewYear");
+    if (oElem.className === "col-12 middle go") {
+      oElem.className = "col-12 middle stop";
+    } else {
+      oElem.className = "col-12 middle go";
+    }
+  }
+
+changeColor();
 
 // TEMP CALCULATOR
 // ========================================================================
@@ -39,6 +56,18 @@ $("#molarity_to_ugmL_Form").on("submit", function(event) {
     document.getElementById("molecularWeightInputugmL").value = molecularWeight
     document.getElementById("ugmLInput").value = ugmL.toFixed(2);
 })
+
+// Spoonacular
+// ===================================
+// $(".recipeForm").on("submit", function(event) {
+//     event.preventDefault();
+//     const recipeInput = document.getElementById("recipeInput");
+//     console.log("Searched for: " + recipeInput.value);
+//     console.log()
+//     console.log("ready to search recipies!")
+// })
+// Spoonacular end
+// ===================================
 
     
 // PARTY MODE
@@ -90,4 +119,5 @@ $("#molarity_to_ugmL_Form").on("submit", function(event) {
     }   
     ///////////////////////
 
-})
+// }
+// )

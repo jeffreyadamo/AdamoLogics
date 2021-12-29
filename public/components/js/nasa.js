@@ -34,4 +34,4 @@ function getNasaPOTD() {
 // var env = process.env.NODE_ENV || 'test';
 // var env = process.env.NODE_ENV || 'development';
 // if (env === 'development'){getNasaPOTD()};
-getNasaPOTD();
+// getNasaPOTD();
