@@ -1,5 +1,5 @@
 # [AdamoLogics](https://jeffreyadamo.github.io/AdamoLogics/)
-### Est. 12/20202  
+### Est. 12/2022  
 
 Welcome to my first project intended for it's own website!  
 
@@ -14,4 +14,8 @@ The goal of this project is to host my own DIY website. Coded from scratch. Buil
  - I'm using BootstrapCDN to start this up, but am interested in utilizing more flexbox into my own CSS. 
 
 More details to come...
+
+## Updates
+
+* 9/21/2022: Working on incorporating the Pandemic Pantry project into the hero banner instead of linking it to Heroku. Heroku nodes will no longer be free soon and I may need to bundle this over to a new server. 
 

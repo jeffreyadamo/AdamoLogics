@@ -6,23 +6,6 @@
 
 // });
 
-// Happy New Year
-// =======================
-function changeColor() {
-    setInterval(flashText, 500);
-}
-
-function flashText() {
-    const oElem = document.getElementById("happyNewYear");
-    if (oElem.className === "col-12 middle go") {
-      oElem.className = "col-12 middle stop";
-    } else {
-      oElem.className = "col-12 middle go";
-    }
-  }
-
-changeColor();
-
 // TEMP CALCULATOR
 // ========================================================================
 $("#tempForm").on("submit", function(event) {

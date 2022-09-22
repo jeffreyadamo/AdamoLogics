@@ -51,15 +51,6 @@
                 <h3 class="text-center yellow">My full stack play space on the internet</h3>
             </div> 
         </div>
-        <div class="row">
-          <div 
-            class="col-12 middle go" 
-            id="happyNewYear" >
-            <h3 class="text-center">
-              "Happy New Year!!!"
-            </h3>
-         </div>          
-        </div>            
         <hr>
         <div class="row">
           <div class="col-12">
@@ -99,36 +90,74 @@
 
     <!-- PANDEMIC PANTRY INSERT -->
     <div class="container">
-      <div class="row">
-        <div class="col-12 middle pantry">
-          <a
-            target="_blank">
-            <div>
-              <h2>
-                Recipe Summarizer
-              </h2>
+      <div class="row pantry">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12 middle">
+              <div>
+                <h2>
+                  Recipe Summarizer
+                </h2>
+              </div>
             </div>
-            <form class="middle recipeForm">
-              <div>
-                <input 
-                  class="roboto flex-center"
-                  type="text" 
-                  id="recipeInput" 
-                  name="recipeInput" 
-                  placeholder="input"
-                >         
-              </div>
-              <div>
-                  <input type="submit" value="Search!">
-              </div>
-            </form>
-          </a>
-          
+          </div>
+          <div class="row">
+            <div class="col-12 middle">
+              <form class="middle recipeForm">
+                <div>
+                  <input 
+                    class="roboto flex-center"
+                    type="text" 
+                    id="recipeInput" 
+                    name="recipeInput" 
+                    placeholder=" Search"
+                  >         
+                </div>
+                <div>
+                    <input type="submit" value="Go!">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row" style="margin-top:15px">
+            <div class="col-6 left">
+              <button 
+                type="button" 
+                class="roboto recipeButtons btn btn-info btn-sm" 
+                id="addIntolerances">
+                  Add Intolerances
+              </button>
+            </div>
+            <div class="col-6 right">
+              <button 
+              type="button" 
+              class="roboto recipeButtons btn btn-info btn-sm">
+                About
+            </button>
+            </div>            
+          </div>
         </div>
       </div>
-      <br>
+      <div id="insertIntolerances"></div>
+      <!-- <div class="row">
+        <div class="col-12 roboto middle" id="insertIntolerances">
+          <label class="btn btn-secondary btn-sm active">
+            <input type="radio" name="options" id="option1" checked> No Constraints
+          </label>
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option2"> Vegan
+          </label>
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option3"> Vegetarian
+          </label>
+          <label class="btn btn-secondary btn-sm">
+            <input type="radio" name="options" id="option4"> Gluten Free
+          </label>
+        </div>
+      </div>   -->
+
       <div class="row">
-        <div class="col-12 roboto">
+        <div class="col-12 roboto" id="recipeResponse">
           <a 
           style="font-family: 'Courgette', cursive; font-size:20px;"
           href="https://pandemic-pantry.herokuapp.com/"
@@ -163,12 +192,12 @@
           Searches can be adjusted to your diet type or specific food intolerances.
           <br>
           This was from my first group project during bootcamp and even though it's simple, I use it all the time! Enjoy.
-          </div>
+        </div>
     </div> 
     <br>
     <div class=row>
       <div class="col-12 roboto small right">
-        Hosted on 
+        Original project, "Pandemic Pantry", hosted on 
         <a 
           href="https://github.com/jeffreyadamo/PandemicPantry" 
           target="_blank"
